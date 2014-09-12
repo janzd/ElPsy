@@ -2541,7 +2541,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the matrix.
      * @return	Standard deviation of the matrix.
      */
-    public double std(int[][] matrix, double mean) {
+    public static double std(int[][] matrix, double mean) {
 
         int width = matrix.length;
         int height = matrix[0].length;
@@ -2565,7 +2565,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the matrix.
      * @return	Standard deviation of the matrix.
      */
-    public double std(double[][] matrix, double mean) {
+    public static double std(double[][] matrix, double mean) {
 
         int width = matrix.length;
         int height = matrix[0].length;
@@ -2588,7 +2588,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the matrix.
      * @return	Standard deviation of the matrix.
      */
-    public double std(long[][] matrix, double mean) {
+    public static double std(long[][] matrix, double mean) {
 
         int width = matrix.length;
         int height = matrix[0].length;
@@ -2611,7 +2611,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the matrix.
      * @return	Standard deviation of the matrix.
      */
-    public float std(float[][] matrix, double mean) {
+    public static float std(float[][] matrix, double mean) {
 
         int width = matrix.length;
         int height = matrix[0].length;
@@ -2635,7 +2635,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the matrix.
      * @return	Standard deviation of the matrix.
      */
-    public float std(byte[][] matrix, double mean) {
+    public static float std(byte[][] matrix, double mean) {
 
         int width = matrix.length;
         int height = matrix[0].length;
@@ -2658,7 +2658,7 @@ public class CommonMathUtils {
      * computed.
      * @return	Standard deviation of the matrix.
      */
-    public double std(double[][] matrix) {
+    public static double std(double[][] matrix) {
 
         double mean = mean(matrix);
         return std(matrix, mean);
@@ -2672,7 +2672,7 @@ public class CommonMathUtils {
      * computed.
      * @return	Standard deviation of the matrix.
      */
-    public double std(int[][] matrix) {
+    public static double std(int[][] matrix) {
 
         double mean = mean(matrix);
         return std(matrix, mean);
@@ -2686,7 +2686,7 @@ public class CommonMathUtils {
      * computed.
      * @return	Standard deviation of the matrix.
      */
-    public float std(float[][] matrix) {
+    public static float std(float[][] matrix) {
 
         float mean = mean(matrix);
         return std(matrix, mean);
@@ -2699,7 +2699,7 @@ public class CommonMathUtils {
      * @param matrix	Matrix of bytes whose standard deviation is to be computed.
      * @return	Standard deviation of the matrix.
      */
-    public double std(byte[][] matrix) {
+    public static double std(byte[][] matrix) {
 
         float mean = mean(matrix);
         return std(matrix, mean);
@@ -2713,7 +2713,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the array.
      * @return	Standard deviation of the array.
      */
-    public double std(double[] array, double mean) {
+    public static double std(double[] array, double mean) {
 
         double sum = 0;
 
@@ -2733,7 +2733,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the array.
      * @return	Standard deviation of the array.
      */
-    public double std(int[] array, double mean) {
+    public static double std(int[] array, double mean) {
 
         double sum = 0;
 
@@ -2752,7 +2752,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the array.
      * @return	Standard deviation of the array.
      */
-    public float std(float[] array, double mean) {
+    public static float std(float[] array, double mean) {
 
         float sum = 0;
 
@@ -2771,7 +2771,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the array.
      * @return	Standard deviation of the array.
      */
-    public double std(long[] array, double mean) {
+    public static double std(long[] array, double mean) {
 
         double sum = 0;
 
@@ -2790,7 +2790,7 @@ public class CommonMathUtils {
      * @param mean	Mean value of the array.
      * @return	Standard deviation of the array.
      */
-    public float std(byte[] array, double mean) {
+    public static float std(byte[] array, double mean) {
 
         float sum = 0;
 
@@ -2808,7 +2808,7 @@ public class CommonMathUtils {
      * @param array Array of doubles whose standard deviation is to be computed.
      * @return	Standard deviation of the array.
      */
-    public double std(double[] array) {
+    public static double std(double[] array) {
 
         double mean = mean(array);
         return std(array, mean);
@@ -2822,7 +2822,7 @@ public class CommonMathUtils {
      * computed.
      * @return	Standard deviation of the array.
      */
-    public double std(int[] array) {
+    public static double std(int[] array) {
 
         double mean = mean(array);
         return std(array, mean);
@@ -2835,7 +2835,7 @@ public class CommonMathUtils {
      * @param array Array of floats whose standard deviation is to be computed.
      * @return	Standard deviation of the array.
      */
-    public float std(float[] array) {
+    public static float std(float[] array) {
 
         double mean = mean(array);
         return std(array, mean);
@@ -2848,7 +2848,7 @@ public class CommonMathUtils {
      * @param array Array of longs whose standard deviation is to be computed.
      * @return	Standard deviation of the array.
      */
-    public double std(long[] array) {
+    public static double std(long[] array) {
 
         double mean = mean(array);
         return std(array, mean);
@@ -2861,7 +2861,7 @@ public class CommonMathUtils {
      * @param array Array of bytes whose standard deviation is to be computed.
      * @return	Standard deviation of the array.
      */
-    public float std(byte[] array) {
+    public static float std(byte[] array) {
 
         double mean = mean(array);
         return std(array, mean);
@@ -2874,7 +2874,7 @@ public class CommonMathUtils {
      * @param n	Integer whose binary logarithm is to be computed.
      * @return	Logarithm of the integer with base 2.
      */
-    public int log2(int n) {
+    public static int log2(int n) {
 
         if (n <= 0) {
             throw new IllegalArgumentException();
@@ -2897,7 +2897,7 @@ public class CommonMathUtils {
      * @return	Estimated function value at the point on x-axis for which
      * function value was sought.
      */
-    public double interpolate(double[] points, double[] values, double interpolateAt) {
+    public static double interpolate(double[] points, double[] values, double interpolateAt) {
         if (points.length != values.length) {
             throw new ArithmeticException("The number of elements in both arrays does not match!");
         } else {
@@ -2931,7 +2931,7 @@ public class CommonMathUtils {
      * @return	Estimated function value at the point on x-axis for which
      * function value was sought.
      */
-    public double interpolate(int[] points, int[] values, double interpolateAt) {
+    public static double interpolate(int[] points, int[] values, double interpolateAt) {
         if (points.length != values.length) {
             throw new ArithmeticException("The number of elements in both arrays does not match!");
         } else {
